@@ -27,12 +27,17 @@ namespace Session_Kavramı.Controllers
             // Ödev : MVC'e redis'i entegre edip, session'ları redis'te tutmanız
             HttpContext.Session.SetInt32("MyInt", 10);
 
+
+            //Sessiondan değeri silmek için Remove metodunu kullanabilirsiniz.
+            //HttpContext.Session.Remove()
+
+
+
             return View();
         }
 
         public IActionResult Privacy()
         {
-           int deger =  (int)HttpContext.Session.GetInt32("MyInt");
             return View();
         }
 
